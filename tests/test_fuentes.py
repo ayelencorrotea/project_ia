@@ -63,7 +63,7 @@ def test_itau_refused_registra_codigo_y_conserva_ofertas(tmp_path, monkeypatch):
     assert "HTTP 403" in fallo[2]
 
 
-@pytest.mark.parametrize("fuente", ["bancochile", "sky"])
+@pytest.mark.parametrize("fuente", ["bancochile", "sky", "cajalosandes"])
 def test_fuente_refused_conserva_ofertas_y_registra_limite(tmp_path, fuente):
     from asistente import fuentes_no_accesibles
 

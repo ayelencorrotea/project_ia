@@ -13,7 +13,7 @@ del `check:` en la PR.
   tests/fixtures/bancochile/* — check: AC3 (bancochile), AC4 (bancochile), AC7
 - [x] T004 SKY — files: asistente/sky.py o receta, tests/test_fuentes.py, tests/fixtures/sky/* — check: AC3 (sky),
   AC4 (sky), AC7
-- [ ] T005 Caja Los Andes — files: asistente/cajalosandes.py o receta, tests/test_fuentes.py,
+- [x] T005 Caja Los Andes — files: asistente/cajalosandes.py o receta, tests/test_fuentes.py,
   tests/fixtures/cajalosandes/* — check: AC3 (cajalosandes), AC4 (cajalosandes), AC7
 - [ ] T006 Coopeuch — files: asistente/coopeuch.py o receta, tests/test_fuentes.py, tests/fixtures/coopeuch/* —
   check: AC3 (coopeuch), AC4 (coopeuch), AC7
