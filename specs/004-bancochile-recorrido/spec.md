@@ -1,6 +1,6 @@
 # 004 — Recorrido real de postulación en Banco de Chile (solo reconocimiento)
 
-Status: ready | Phase: solid | Domain: code | Created: 2026-11-24 | Base commit: 910e767
+Status: in-progress | Phase: solid | Domain: code | Created: 2026-11-24 | Base commit: 910e767
 Request: "Recorrido real de postulación en Banco de Chile (solo reconocimiento y documentación, sin enviar)."
 Relates: REQUERIMIENTOS.md (flujo 4, P2, pregunta 3 de la revisión técnica), 001 (relay), 005 (estados de candidatura)
 
@@ -64,7 +64,7 @@ Verdict: pending.
   segundo recorrido.
 
 ## Tasks
-- [ ] T001 Prueba de documentos de portales (secciones + datos personales, con un ejemplo negativo) — files:
+- [x] T001 Prueba de documentos de portales (secciones + datos personales, con un ejemplo negativo) — files:
   tests/test_docs_portales.py — check: AC1, AC2 (con un documento de ejemplo)
 - [ ] T002 Recorrido con Ayelén y documento — files: docs/portales/banco-de-chile.md, docs/portales/img/* — check:
   AC1, AC2, AC3
