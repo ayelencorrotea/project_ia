@@ -1,6 +1,6 @@
 # 009 — Evaluación: cobertura, extracción, tiempo y ranking aprendido
 
-Status: ready | Phase: solid | Domain: code | Created: 2026-11-24 | Base commit: 910e767
+Status: in-progress | Phase: solid | Domain: code | Created: 2026-11-24 | Base commit: 910e767
 Request: "Evaluación: métricas de cobertura/extracción/tiempo y ranking aprendido vs reglas con muestra reservada."
 Relates: REQUERIMIENTOS.md (P3, pregunta 4, «IA y ranking», paso 3 de «Prueba de integración»), 002 (reglas), 005
 (candidaturas), 007 (cobertura por fuente)
@@ -71,6 +71,9 @@ también se informa cuántos «me interesa» quedan en el top 5 de cada método.
   se puede ajustar con una línea en Change log.
 - Las etiquetas de interés son distintas de la elección de CV (REQUERIMIENTOS: «Mantener la decisión de interés por
   una oferta como un dato distinto de la elección de CV»).
+- «Sin evidencia» = requisito extraído cuya cita no está en la revisión manual (la extracción afirma algo que la
+  revisión no respalda). La extracción evaluada es la de `asistente.reglas` sobre la descripción guardada; las fichas
+  pendientes de descripción cuentan como «sin oferta».
 
 ## Change log
 
@@ -85,10 +88,10 @@ Verdict: pending.
 ## Tasks
 Toma una tarea marcándola `[~] (agente: nombre)`; una tarea por PR; `[x]` solo con la evidencia del `check:` en la PR.
 
-- [ ] T001 Lectura de archivos privados, cobertura y extracción — files: asistente/evaluacion.py,
+- [x] T001 Lectura de archivos privados, cobertura y extracción — files: asistente/evaluacion.py,
   tests/test_evaluacion.py — check: AC1, AC2, AC6
 - [ ] T002 Tiempo de preparación (requiere 005) — files: asistente/evaluacion.py, tests/test_evaluacion.py — check: AC3
-- [ ] T003 Ranking por reglas vs Naive Bayes con muestra reservada — files: asistente/evaluacion.py,
+- [x] T003 Ranking por reglas vs Naive Bayes con muestra reservada — files: asistente/evaluacion.py,
   tests/test_evaluacion.py — check: AC4, AC5
 - [ ] T004 Primer reporte real con Ayelén y documentación — files: specs/009-evaluacion/spec.md, README.md — check: AC7
 
