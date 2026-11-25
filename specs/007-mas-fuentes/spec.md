@@ -89,6 +89,8 @@ See plan.md → Approach. Changing it requires a Change log line here.
 
 - Caja Los Andes (2026-11-24, Chile). El [portal](https://cajalosandes.trabajando.cl/) presenta el título del listado sin fichas en el HTML observado. [robots.txt](https://cajalosandes.trabajando.cl/robots.txt) respondió HTTP 200 y excluye ChatGPT-User. Sus [términos](https://cajalosandes.trabajando.cl/terminos-y-condiciones) restringen agentes de búsqueda y copia. Sin método autorizado verificado. AC3 no aplica. AC4 comprueba que la limitación se registra y conserva las ofertas previas.
 
+- Coopeuch (2026-11-24, Chile). El [portal](https://coopeuch.trabajando.cl/) tiene ofertas indexadas, aunque el HTML inicial observado carece de fichas. [robots.txt](https://coopeuch.trabajando.cl/robots.txt) respondió HTTP 200 y excluye ChatGPT-User. Sus [términos](https://coopeuch.trabajando.cl/terminos-y-condiciones) restringen agentes de búsqueda y copia. Sin método autorizado verificado. AC3 no aplica. AC4 comprueba que la limitación se registra y conserva las ofertas previas.
+
 ## Change log
 
 ## Verify
