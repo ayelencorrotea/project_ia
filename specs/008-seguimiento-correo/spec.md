@@ -1,6 +1,6 @@
 # 008 — Seguimiento por correo (opcional, solo lectura)
 
-Status: ready | Phase: solid | Domain: code | Created: 2026-11-24 | Base commit: 910e767
+Status: in-progress | Phase: solid | Domain: code | Created: 2026-11-24 | Base commit: 910e767
 Request: "Seguimiento por correo (opcional, solo lectura)."
 Relates: REQUERIMIENTOS.md (flujo 5, P3), 005 (candidaturas y estados)
 
@@ -69,6 +69,13 @@ See plan.md → Approach. Changing it requires a Change log line here.
 - Los correos de prueba son ficticios y se escriben a mano en `tests/fixtures/correo/`.
 
 ## Change log
+- 2026-11-25 (T001): `correo_eventos` agrega `candidatas` (lista JSON de IDs de candidatura) para que un correo
+  «por revisar» conserve con qué candidaturas calzó (S2). La huella es la del mensaje (en un `.mbox`, cada mensaje):
+  el mismo correo exportado como `.eml` y dentro de un `.mbox` se importa una vez. En T001 todo correo relacionado
+  queda `por_revisar`; la asociación por cargo o ID llega en T002.
+- 2026-11-25 (T002): `confirmar <evento> --candidatura <id>` resuelve un correo «por revisar» eligiendo una de sus
+  candidatas (S2); sin `--candidatura` falla y no cambia nada. Un reenvío (asunto `RV:`, `Fwd:`…) toma remitente y
+  fecha de las líneas `De:`/`Fecha:` del cuerpo; si falta alguno, queda «por revisar».
 
 ## Verify
 Verdict: pending.
