@@ -61,3 +61,22 @@ def test_itau_refused_registra_codigo_y_conserva_ofertas(tmp_path, monkeypatch):
         fallo = db.execute("SELECT codigo_http, url, motivo FROM fallos WHERE fuente='itau'").fetchone()
     assert fallo[:2] == (403, itau.SEARCH)
     assert "HTTP 403" in fallo[2]
+
+
+@pytest.mark.parametrize("fuente", ["bancochile"])
+def test_fuente_refused_conserva_ofertas_y_registra_limite(tmp_path, fuente):
+    from asistente import fuentes_no_accesibles
+
+    bd = tmp_path / "preservar.sqlite3"
+    ofertas.guardar(bd, [{
+        "fuente": fuente, "id_origen": "1", "empresa": "Banco ficticio",
+        "cargo": "Analista", "enlace": "https://example.org/oferta", "descripcion": "Python",
+    }])
+    fuentes_no_accesibles.main(["--bd", str(bd), fuente])
+    assert ofertas.leer_oferta(bd, fuente, "1")["descripcion"] == "Python"
+    with closing(ofertas.conectar(bd)) as db:
+        consulta = "SELECT url, codigo_http, motivo FROM fallos WHERE fuente = ?"
+        fallo = db.execute(consulta, (fuente,)).fetchone()
+    assert fallo[0].startswith("https://")
+    assert fallo[1] is None  # La restricción se verificó sin fingir una respuesta HTTP.
+    assert fallo[2].startswith("No accesible:")
