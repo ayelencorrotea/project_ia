@@ -9,7 +9,7 @@ del `check:` en la PR.
 - [x] T002 Itaú al modelo común (migración + `save()` con `guardar()`; receta del relay si la lectura directa sigue en
   403) — files: itau.py, tests/test_itau.py, tests/test_fuentes.py, relay/recipes/itau_ofertas.json (opcional) —
   check: AC1, AC2, AC3 (itau), AC4 (itau), AC7
-- [ ] T003 Banco de Chile (listado y fichas) — files: asistente/bancochile.py o receta, tests/test_fuentes.py,
+- [x] T003 Banco de Chile (listado y fichas) — files: asistente/bancochile.py o receta, tests/test_fuentes.py,
   tests/fixtures/bancochile/* — check: AC3 (bancochile), AC4 (bancochile), AC7
 - [ ] T004 SKY — files: asistente/sky.py o receta, tests/test_fuentes.py, tests/fixtures/sky/* — check: AC3 (sky),
   AC4 (sky), AC7

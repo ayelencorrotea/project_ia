@@ -78,6 +78,13 @@ See plan.md → Approach. Changing it requires a Change log line here.
   verificada con copias de prueba del listado y de una ficha. El método directo queda registrado como no accesible
   desde este entorno.
 
+- Banco de Chile (2026-11-24, Chile). [Portal](https://bancodechile.trabajando.cl/) ·
+  [robots.txt](https://bancodechile.trabajando.cl/robots.txt) (HTTP 200, excluye ChatGPT-User) ·
+  [términos](https://bancodechile.trabajando.cl/terminos-y-condiciones) (restringen agentes de búsqueda y copia).
+  El listado inicial muestra la estructura de la página, sin fichas en el HTML observado. Sin método de
+  importación autorizado verificado. AC3 no aplica. La prueba de AC4 registra el motivo de la limitación,
+  sin inventar un código HTTP, y comprueba que conserva las ofertas previas.
+
 ## Change log
 
 ## Verify
