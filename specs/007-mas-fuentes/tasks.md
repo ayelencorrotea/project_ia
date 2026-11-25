@@ -17,7 +17,7 @@ del `check:` en la PR.
   tests/fixtures/cajalosandes/* — check: AC3 (cajalosandes), AC4 (cajalosandes), AC7
 - [x] T006 Coopeuch — files: asistente/coopeuch.py o receta, tests/test_fuentes.py, tests/fixtures/coopeuch/* —
   check: AC3 (coopeuch), AC4 (coopeuch), AC7
-- [ ] T007 Corrida en vivo de las fuentes accesibles y reporte en Verify; README — files: specs/007-mas-fuentes/spec.md,
+- [x] T007 Corrida en vivo de las fuentes accesibles y reporte en Verify; README — files: specs/007-mas-fuentes/spec.md,
   README.md, REQUERIMIENTOS.md — check: AC8
 
 | AC | Task |

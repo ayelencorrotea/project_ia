@@ -115,6 +115,23 @@ las `señales` del perfil (`demo/perfil.json`) asocian la evidencia. Si la frase
 el requisito queda por confirmar aunque haya evidencia. Para revisar sin conexión, guarda las respuestas JSON
 y usa `python3 -m asistente.bci --json listado.json --fichas carpeta/` con fichas `proceso_<id>.json`.
 
+## Cobertura de ofertas
+
+Ejecuta `python3 -m asistente.cobertura` para ver las ofertas completas y
+pendientes, la última importación con ofertas y el último fallo por fuente.
+Agrega `--json` para obtener datos estructurados y `--bd RUTA` si usas otra base.
+
+Itaú admite la importación desde HTML guardado. Para registrar las limitaciones
+verificadas de Banco de Chile, SKY, Caja Los Andes y Coopeuch en la misma base:
+
+```sh
+python3 -m asistente.fuentes_no_accesibles bancochile sky cajalosandes coopeuch
+python3 -m asistente.cobertura
+```
+
+Ese primer comando registra las limitaciones documentadas en la spec 007.
+Bci se importa con el lector descrito arriba.
+
 ## Relay de navegador
 
 La carpeta `relay/` contiene una extensión de Chrome y un servicio local para ejecutar recetas en el navegador
