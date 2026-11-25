@@ -10,6 +10,10 @@ LIMITACIONES = {
         "https://bancodechile.trabajando.cl/",
         "El portal restringe la búsqueda automatizada en sus términos y robots.txt.",
     ),
+    "sky": (
+        "https://www.skyairline.com/es/chile/skyers/jobsearch",
+        "El listado requiere JavaScript y no se verificó un método permitido para importar fichas.",
+    ),
 }
 
 

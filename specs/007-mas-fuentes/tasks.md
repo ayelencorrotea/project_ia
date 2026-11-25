@@ -11,7 +11,7 @@ del `check:` en la PR.
   check: AC1, AC2, AC3 (itau), AC4 (itau), AC7
 - [x] T003 Banco de Chile (listado y fichas) — files: asistente/bancochile.py o receta, tests/test_fuentes.py,
   tests/fixtures/bancochile/* — check: AC3 (bancochile), AC4 (bancochile), AC7
-- [ ] T004 SKY — files: asistente/sky.py o receta, tests/test_fuentes.py, tests/fixtures/sky/* — check: AC3 (sky),
+- [x] T004 SKY — files: asistente/sky.py o receta, tests/test_fuentes.py, tests/fixtures/sky/* — check: AC3 (sky),
   AC4 (sky), AC7
 - [ ] T005 Caja Los Andes — files: asistente/cajalosandes.py o receta, tests/test_fuentes.py,
   tests/fixtures/cajalosandes/* — check: AC3 (cajalosandes), AC4 (cajalosandes), AC7
