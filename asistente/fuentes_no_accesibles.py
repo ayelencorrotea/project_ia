@@ -18,6 +18,10 @@ LIMITACIONES = {
         "https://cajalosandes.trabajando.cl/",
         "El portal restringe la búsqueda automatizada en sus términos y robots.txt.",
     ),
+    "coopeuch": (
+        "https://coopeuch.trabajando.cl/",
+        "El portal restringe la búsqueda automatizada en sus términos y robots.txt.",
+    ),
 }
 
 
