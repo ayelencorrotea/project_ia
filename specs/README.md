@@ -14,7 +14,7 @@ para que una persona o un agente de código (Codex, Claude Code u otro) pueda to
 | [005](005-candidatura-estados/spec.md) | Candidatura con estados y aprobación ligada a la huella del contenido | ready | P2 | 4 | 002 |
 | [006](006-vista-revision/spec.md) | Vista de revisión: PDF, respuestas y aprobar | ready | P1 · P2 | 4 | 005 |
 | [007](007-mas-fuentes/spec.md) | Más fuentes con cobertura medida | in-progress | P0 · P3 | 4 | 001, 002 |
-| [008](008-seguimiento-correo/spec.md) | Seguimiento por correo (opcional, solo lectura) | ready | P3 | 4 | 005 |
+| [008](008-seguimiento-correo/spec.md) | Seguimiento por correo (opcional, solo lectura) | in-progress | P3 | 4 | 005 |
 | [009](009-evaluacion/spec.md) | Evaluación: cobertura, extracción, tiempo y ranking aprendido | ready | P3 | 3 | 002, 005 |
 
 Status: `draft` (en redacción) → `ready` (se puede tomar) → `in-progress` (alguna tarea tomada) → `verifying` (todas las

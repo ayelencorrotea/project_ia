@@ -3,7 +3,7 @@
 Requiere 005 integrada. Toma una tarea marcándola `[~] (agente: nombre)`; una tarea por PR; `[x]` solo con la evidencia
 del `check:` en la PR.
 
-- [ ] T001 Lectura de `.eml`/`.mbox`, clasificación con cita y datos mínimos — files: asistente/correo.py,
+- [x] T001 Lectura de `.eml`/`.mbox`, clasificación con cita y datos mínimos — files: asistente/correo.py,
   tests/test_correo.py, tests/fixtures/correo/* — check: AC4, AC5, AC6, AC7
 - [ ] T002 Asociación con candidaturas, «por revisar» y `confirmar` — files: asistente/correo.py, tests/test_correo.py —
   check: AC1, AC2, AC3
