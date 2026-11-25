@@ -1,6 +1,6 @@
 # 007 — Más fuentes con cobertura medida
 
-Status: in-progress | Phase: solid | Domain: code | Created: 2026-11-24 | Base commit: 910e767
+Status: verifying | Phase: solid | Domain: code | Created: 2026-11-24 | Base commit: 910e767
 Request: "Más fuentes (Itaú vía relay, Banco de Chile, SKY, Caja Los Andes, Coopeuch) con cobertura medida."
 Relates: REQUERIMIENTOS.md (flujo 1, P0 y P3, «Fuentes» en Decisiones técnicas, pregunta 1), 001 (relay), 002 (modelo
 común), 003 (calibrar recetas)
@@ -94,7 +94,32 @@ See plan.md → Approach. Changing it requires a Change log line here.
 ## Change log
 
 ## Verify
-Verdict: pending.
+- AC8. Corrida en una base temporal. Bci importó la primera página y solicitó sus 20 fichas.
+  Itaú respondió 403 en el listado y se detuvo. Los cuatro portales restantes aparecen con su limitación
+  documentada. El 100 % de Bci corresponde a la primera página de esta corrida.
+
+```text
+bancochile · 0 ofertas · 0 completas (0 %) · 0 pendientes
+  Última importación con ofertas: sin registro
+  Último fallo: 2026-11-25T12:14:18+00:00 · No accesible: El portal restringe la búsqueda automatizada en sus términos y robots.txt.
+bci · 20 ofertas · 20 completas (100 %) · 0 pendientes
+  Última importación con ofertas: 2026-11-25T12:14:18+00:00
+  Último fallo: sin registro
+cajalosandes · 0 ofertas · 0 completas (0 %) · 0 pendientes
+  Última importación con ofertas: sin registro
+  Último fallo: 2026-11-25T12:14:18+00:00 · No accesible: El portal restringe la búsqueda automatizada en sus términos y robots.txt.
+coopeuch · 0 ofertas · 0 completas (0 %) · 0 pendientes
+  Última importación con ofertas: sin registro
+  Último fallo: 2026-11-25T12:14:18+00:00 · No accesible: El portal restringe la búsqueda automatizada en sus términos y robots.txt.
+itau · 0 ofertas · 0 completas (0 %) · 0 pendientes
+  Última importación con ofertas: sin registro
+  Último fallo: 2026-11-25T12:13:22+00:00 · HTTP 403 · Itaú devolvió HTTP 403 para https://trabajaenitau.cl/search.
+sky · 0 ofertas · 0 completas (0 %) · 0 pendientes
+  Última importación con ofertas: sin registro
+  Último fallo: 2026-11-25T12:14:18+00:00 · No accesible: El listado requiere JavaScript y no se verificó un método permitido para importar fichas.
+```
+
+Verdict: AC8 verificado en la rama de T007. Pendiente integración y observación de siete días.
 
 ## Observe (define now, read after ship)
 - O1: % de fichas completas por fuente — where: `python -m asistente.cobertura --json` — when: +7 días de uso —
