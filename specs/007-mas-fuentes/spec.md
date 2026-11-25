@@ -87,6 +87,8 @@ See plan.md → Approach. Changing it requires a Change log line here.
 
 - SKY (2026-11-24, Chile). El HTML inicial del [portal](https://www.skyairline.com/es/chile/skyers/jobsearch) pide JavaScript. La ruta [robots.txt](https://www.skyairline.com/robots.txt) devolvió HTTP 200 con HTML en vez de reglas. Se identificó una ficha pública indexada, sin verificar extracción de requisitos ni términos aplicables a una integración. Sin API pública o captura autorizada verificada. AC3 no aplica. AC4 comprueba que la limitación se registra y conserva las ofertas previas.
 
+- Caja Los Andes (2026-11-24, Chile). El [portal](https://cajalosandes.trabajando.cl/) presenta el título del listado sin fichas en el HTML observado. [robots.txt](https://cajalosandes.trabajando.cl/robots.txt) respondió HTTP 200 y excluye ChatGPT-User. Sus [términos](https://cajalosandes.trabajando.cl/terminos-y-condiciones) restringen agentes de búsqueda y copia. Sin método autorizado verificado. AC3 no aplica. AC4 comprueba que la limitación se registra y conserva las ofertas previas.
+
 ## Change log
 
 ## Verify
