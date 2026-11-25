@@ -85,6 +85,8 @@ See plan.md → Approach. Changing it requires a Change log line here.
   importación autorizado verificado. AC3 no aplica. La prueba de AC4 registra el motivo de la limitación,
   sin inventar un código HTTP, y comprueba que conserva las ofertas previas.
 
+- SKY (2026-11-24, Chile). El HTML inicial del [portal](https://www.skyairline.com/es/chile/skyers/jobsearch) pide JavaScript. La ruta [robots.txt](https://www.skyairline.com/robots.txt) devolvió HTTP 200 con HTML en vez de reglas. Se identificó una ficha pública indexada, sin verificar extracción de requisitos ni términos aplicables a una integración. Sin API pública o captura autorizada verificada. AC3 no aplica. AC4 comprueba que la limitación se registra y conserva las ofertas previas.
+
 ## Change log
 
 ## Verify
