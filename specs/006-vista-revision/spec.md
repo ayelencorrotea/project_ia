@@ -1,6 +1,6 @@
 # 006 — Vista de revisión: PDF, respuestas y aprobar
 
-Status: ready | Phase: solid | Domain: code | Created: 2026-11-24 | Base commit: 910e767
+Status: verifying | Phase: solid | Domain: code | Created: 2026-11-24 | Base commit: 910e767
 Request: "Vista de revisión (PDF + respuestas + aprobar)."
 Relates: REQUERIMIENTOS.md (flujo 2–4, P1 y P2, «Interfaz» en Decisiones técnicas), 005 (candidaturas y huella)
 
@@ -70,7 +70,12 @@ See plan.md → Approach. Changing it requires a Change log line here.
 ## Change log
 
 ## Verify
-Verdict: pending.
+- AC9, 24 de noviembre de 2026 (Chile). Chromium 156.0.8078.79 a 375 × 812 px con datos ficticios.
+  Se comprobó que la página no producía desplazamiento horizontal en modo oscuro, que el PDF se cargó,
+  que el cambio de CV y la aprobación funcionaron y que se aplicó el fondo claro al cambiar el modo.
+  [Captura en modo oscuro](verificacion-movil.png).
+
+Verdict: verificado en la rama de T003, pendiente de integración.
 
 ## Observe (define now, read after ship)
 - O1: candidaturas aprobadas desde la vista — where: `candidatura_eventos` (motivo «vista») — when: +14 días — success:

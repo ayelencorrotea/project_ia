@@ -115,6 +115,65 @@ las `señales` del perfil (`demo/perfil.json`) asocian la evidencia. Si la frase
 el requisito queda por confirmar aunque haya evidencia. Para revisar sin conexión, guarda las respuestas JSON
 y usa `python3 -m asistente.bci --json listado.json --fichas carpeta/` con fichas `proceso_<id>.json`.
 
+## Revisión local de candidaturas
+
+Usa la misma base SQLite al importar la oferta, elegir el CV y crear la candidatura.
+El siguiente ejemplo supone que la oferta `bci:39410` ya está guardada. Usa el ID
+de tu oferta y el número que imprime «Decisión guardada» en lugar de `1`.
+
+```sh
+python3 app.py --oferta-bd bci:39410 --reglas --elegir datos
+python3 -m asistente.candidaturas crear bci:39410 1 demo/cv/datos.pdf
+```
+
+`crear` imprime el ID de la candidatura. Usa ese ID en los comandos siguientes.
+El archivo `privado/respuestas.json` contiene un objeto con los nombres de los
+campos y valores de texto, por ejemplo `{"motivación": "Experiencia con Python"}`.
+`responder` reemplaza el conjunto de respuestas. Los valores vacíos o que
+contienen `{pendiente}` aparecen en `mostrar` y bloquean la aprobación.
+
+```sh
+python3 -m asistente.candidaturas responder 1 privado/respuestas.json
+python3 -m asistente.candidaturas listo 1
+python3 -m asistente.candidaturas mostrar 1
+python3 -m asistente.candidaturas aprobar 1 HUELLA_MOSTRADA
+python3 -m asistente.candidaturas historial 1
+```
+
+Revisa el PDF y las respuestas antes de copiar la huella. Si cambian las
+respuestas o el contenido del PDF, usa `responder` con el JSON completo y revisa
+la nueva huella. Para usar otra base, coloca `--bd RUTA` antes del subcomando.
+
+La CLI solo registra resultados en SQLite. Después de una postulación
+confirmada, usa `enviado 1 --comprobante FOLIO` (el comprobante es opcional).
+Si el resultado es incierto, usa `incierto 1`. Al verificar el resultado, usa
+`enviado 1` si se realizó o `no-enviado 1` si se confirma que no se realizó.
+
+### Revisar en el navegador
+
+Ejecuta este comando y abre la dirección local que imprime:
+
+```sh
+python3 -m asistente.revision
+```
+
+Para practicar desde cero, ejecuta `python3 -m asistente.revision --demo`.
+Verás una candidatura ficticia lista para revisar. Los cambios quedan en una
+base temporal que se elimina al cerrar la demo. Usa `--puerto 8771` si ya
+tienes otra instancia abierta.
+
+La vista normal lista las candidaturas de la base indicada. Las ofertas
+importadas aparecen después de preparar una candidatura con `crear`.
+
+Abre una candidatura marcada como `listo` para revisar la oferta, las citas,
+las respuestas y el PDF. Si eliges otro CV, la vista registra la decisión,
+muestra el PDF seleccionado y vuelve a pedir aprobación cuando cambia el
+contenido. La aprobación queda registrada localmente en SQLite.
+
+`--bd RUTA` selecciona la misma base que usaste en la CLI. Usa `--perfil RUTA`
+para cargar el perfil con el que guardaste tu CV y `--puerto` para cambiar el
+puerto predeterminado de 8770. La aplicación se sirve en `127.0.0.1`.
+
 ## Relay de navegador
 
 La carpeta `relay/` contiene una extensión de Chrome y un servicio local para ejecutar recetas en el navegador

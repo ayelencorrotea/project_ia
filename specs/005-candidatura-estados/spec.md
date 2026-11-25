@@ -1,6 +1,6 @@
 # 005 — Candidatura con estados y aprobación ligada a la huella del contenido
 
-Status: ready | Phase: solid | Domain: code | Created: 2026-11-24 | Base commit: 910e767
+Status: verifying | Phase: solid | Domain: code | Created: 2026-11-24 | Base commit: 910e767
 Request: "Flujo de candidatura con estados (borrador → listo → aprobado → enviado → por verificar) y aprobación ligada
 al hash del contenido."
 Relates: REQUERIMIENTOS.md (flujo 4 y 5, criterio «Se modifica una candidatura aprobada…», «Candidatura» en Datos),

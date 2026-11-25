@@ -23,6 +23,10 @@
 
 ## Estado actual
 
+- La vista local muestra la oferta, la evidencia, las respuestas y el PDF guardado. Permite elegir otro CV y aprobar la huella revisada desde el navegador.
+
+- La CLI de candidaturas permite preparar y revisar una oferta guardada, aprobar el contenido exacto y registrar en SQLite el resultado observado de un envío. Ver el recorrido en `README.md`.
+
 - `app.py` calcula una recomendación, registra la elección en SQLite y guarda la huella del PDF. El ejemplo de Itaú usa una referencia manual y un perfil ficticio. La ruta opcional a OpenAI se probó con una respuesta simulada; falta validarla con un modelo real.
 - `itau.py` importa listados y fichas HTML. En el Mac se importaron 25 ofertas de una copia real del listado. Desde Codex, la consulta directa a Itaú recibió HTTP 403.
 - `asistente/bci.py` lee Bci desde la API pública que usa su sitio (prueba del 2026-11-24: 45 ofertas publicadas, listado y fichas completas con requisitos). Guarda en la tabla común `ofertas` y registra los fallos por fuente. `app.py --oferta-bd bci:<id> --reglas` lleva una ficha guardada hasta la recomendación con reglas de Python. Itaú todavía usa su propia tabla. LATAM respondió con el HTML inicial de la página, sin requisitos en esa respuesta. Queda por validar una ficha renderizada.
